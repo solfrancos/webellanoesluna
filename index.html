@@ -25,14 +25,13 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:0 2.5rem;height:70px
 .mobile-menu{display:none;position:fixed;inset:0;background:var(--cream);z-index:300;flex-direction:column;align-items:center;justify-content:center;gap:3rem;}
 .mobile-menu.open{display:flex;}
 .mobile-menu a{text-decoration:none;color:var(--charcoal);font-family:'Bodoni Moda',serif;font-size:1.7rem;font-style:italic;font-weight:300;}
-.mobile-menu{gap:1.6rem;padding:2rem 1.5rem;overflow-y:auto;justify-content:center;}
-.mob-sep{width:44px;height:1px;background:var(--warm);margin:0.4rem 0;}
-.mob-group{width:100%;max-width:340px;text-align:center;}
-.mob-gl{font-size:0.6rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--warm);margin-bottom:0.6rem;}
-.mob-fbs{display:flex;flex-wrap:wrap;gap:0.4rem;justify-content:center;}
-.mob-fb{font-family:inherit;font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--charcoal);background:none;border:1px solid var(--sand);padding:0.4rem 0.7rem;cursor:pointer;}
-.mob-fb.active{background:var(--bronze);color:var(--white);border-color:var(--bronze);}
-.close-menu{position:absolute;top:1.5rem;right:2rem;background:none;border:none;font-size:2rem;cursor:pointer;color:var(--charcoal);}
+.mobile-menu{gap:1.9rem;padding:5rem 2.2rem 2rem;overflow-y:auto;justify-content:center;align-items:flex-start;text-align:left;}
+.mob-group{display:flex;flex-direction:column;align-items:flex-start;gap:0.75rem;width:100%;}
+.mob-gl,.mobile-menu a{font-family:'Jost',sans-serif;font-size:1rem;font-weight:400;font-style:normal;letter-spacing:0.17em;text-transform:uppercase;color:var(--charcoal);text-decoration:none;}
+.mob-gl{margin-bottom:0.35rem;}
+.mob-link{font-family:'Jost',sans-serif;font-size:1.02rem;font-weight:300;letter-spacing:0.04em;color:#9c7b5c;background:none;border:none;padding:0 0 0 1rem;cursor:pointer;text-align:left;}
+.mob-link.active{color:var(--charcoal);font-weight:400;}
+.close-menu{position:absolute;top:1.2rem;right:1.6rem;background:none;border:none;font-size:2rem;cursor:pointer;color:var(--charcoal);}
 
 /* HERO */
 .hero{margin-top:70px;position:relative;overflow:hidden;min-height:460px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:5.5rem 2rem 3rem;background:linear-gradient(170deg,#faf4ed 0%,#f0e4d2 60%,#f0e4d2 100%);}
@@ -264,28 +263,15 @@ footer p{font-size:0.68rem;letter-spacing:0.12em;color:var(--warm);margin-bottom
 
 <div class="mobile-menu" id="mob">
   <button class="close-menu" onclick="closeMenu()">×</button>
-  <a href="#catalogue" onclick="closeMenu()">Collection</a>
+  <div class="mob-group">
+    <div class="mob-gl">Products</div>
+    <button class="mob-link" data-mf="type" data-mv="ring" onclick="pickFilter('type','ring')">Rings</button>
+    <button class="mob-link" data-mf="type" data-mv="earring" onclick="pickFilter('type','earring')">Earrings</button>
+    <button class="mob-link" data-mf="type" data-mv="pendant" onclick="pickFilter('type','pendant')">Pendants</button>
+    <button class="mob-link" data-mf="type" data-mv="bracelet" onclick="pickFilter('type','bracelet')">Bracelets</button>
+  </div>
   <a href="#about" onclick="closeMenu()">About</a>
   <a href="https://www.instagram.com/ellanoesluna/" target="_blank" onclick="closeMenu()">Instagram</a>
-  <div class="mob-sep"></div>
-  <div class="mob-group">
-    <div class="mob-gl">Collection</div>
-    <div class="mob-fbs">
-      <button class="mob-fb" data-mf="coll" data-mv="all" onclick="pickFilter('coll','all')">All</button>
-      <button class="mob-fb" data-mf="coll" data-mv="aw2026" onclick="pickFilter('coll','aw2026')">New collection AW 2026</button>
-      <button class="mob-fb" data-mf="coll" data-mv="pinky" onclick="pickFilter('coll','pinky')">Pinky ring selection</button>
-    </div>
-  </div>
-  <div class="mob-group">
-    <div class="mob-gl">Type</div>
-    <div class="mob-fbs">
-      <button class="mob-fb" data-mf="type" data-mv="all" onclick="pickFilter('type','all')">All</button>
-      <button class="mob-fb" data-mf="type" data-mv="ring" onclick="pickFilter('type','ring')">Rings</button>
-      <button class="mob-fb" data-mf="type" data-mv="earring" onclick="pickFilter('type','earring')">Earrings</button>
-      <button class="mob-fb" data-mf="type" data-mv="pendant" onclick="pickFilter('type','pendant')">Pendants</button>
-      <button class="mob-fb" data-mf="type" data-mv="bracelet" onclick="pickFilter('type','bracelet')">Bracelets</button>
-    </div>
-  </div>
 </div>
 
 <section class="hero">
@@ -808,7 +794,7 @@ footer p{font-size:0.68rem;letter-spacing:0.12em;color:var(--warm);margin-bottom
 
 <script>
 function syncMobFilters(){
-  document.querySelectorAll('.mob-fb').forEach(b=>{
+  document.querySelectorAll('.mob-link').forEach(b=>{
     b.classList.toggle('active', af[b.dataset.mf]===b.dataset.mv);
   });
 }
