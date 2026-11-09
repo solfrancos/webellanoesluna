@@ -228,6 +228,41 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:0 2.5rem;height:70px
   .story-text{font-size:0.92rem;line-height:1.7;}
 }
 
+/* RING SIZE GUIDE */
+.sizeg{background:var(--white);padding:6rem 2.5rem;border-top:1px solid var(--sand);scroll-margin-top:60px;}
+.sizeg-in{max-width:860px;margin:0 auto;}
+.sizeg-card{background:var(--cream);border:1px solid var(--sand);padding:2rem 2rem 2.2rem;margin-bottom:2.6rem;}
+.sizeg-ct{font-family:'Bodoni Moda',serif;font-size:1.3rem;font-weight:400;font-style:italic;color:var(--charcoal);margin-bottom:0.7rem;line-height:1.3;text-align:center;}
+.sizeg-cp{font-size:0.86rem;line-height:1.8;color:#7a6555;text-align:center;max-width:560px;margin:0 auto 1.8rem;}
+.sizeg-cp strong{font-weight:500;color:var(--charcoal);}
+.sizeg-fig{display:flex;align-items:center;justify-content:center;gap:2.4rem;color:var(--bronze);}
+.sizeg-fig text{font-family:'Bodoni Moda',serif;}
+.sizeg-inner{flex:0 0 130px;width:130px;height:auto;}
+.sizeg-ruler{flex:1 1 auto;max-width:520px;width:100%;height:auto;}
+.sizeg-tw{overflow-x:auto;border:1px solid var(--sand);}
+.sizeg-t{width:100%;border-collapse:collapse;font-size:0.84rem;text-align:center;}
+.sizeg-t th{font-size:0.62rem;letter-spacing:0.16em;text-transform:uppercase;font-weight:500;color:var(--bronze);background:var(--cream);padding:0.9rem 0.6rem;border-bottom:1px solid var(--sand);}
+.sizeg-t td{padding:0.7rem 0.6rem;color:#7a6555;border-bottom:1px solid var(--sand);}
+.sizeg-t tr:last-child td{border-bottom:none;}
+.sizeg-t .sizeg-grp th{font-size:0.72rem;letter-spacing:0.22em;padding:0.8rem 0.6rem 0.6rem;border-bottom:none;}
+.sizeg-t thead tr:nth-child(2) th{padding-top:0.3rem;font-size:0.58rem;}
+.sizeg-t th:nth-child(n+2),.sizeg-t td:nth-child(n+2){border-left:1px solid var(--sand);}
+.sizeg-t .sizeg-grp th:nth-child(2){border-bottom:1px solid var(--sand);}
+.sizeg-t td:first-child{color:var(--charcoal);font-weight:500;}
+.sizeg-note{font-size:0.78rem;line-height:1.7;color:#7a6555;text-align:center;max-width:560px;margin:1.6rem auto 0;}
+.sizeg-note a{color:var(--bronze);text-decoration:underline;text-underline-offset:3px;}
+@media(max-width:600px){
+  .sizeg{padding:4rem 1.2rem;}
+  .sizeg-card{padding:1.4rem 1rem 1.5rem;margin-bottom:2rem;}
+  .sizeg-ct{font-size:1.3rem;}
+  .sizeg-cp{font-size:0.92rem;line-height:1.7;margin-bottom:1.4rem;}
+  .sizeg-fig{flex-direction:column;gap:1rem;}
+  .sizeg-inner{flex:none;width:120px;}
+  .sizeg-t{font-size:0.9rem;}
+  .sizeg-t th{font-size:0.56rem;letter-spacing:0.08em;padding:0.8rem 0.3rem;}
+  .sizeg-t td{padding:0.65rem 0.3rem;}
+}
+
 /* FOOTER */
 footer{padding:3.5rem 2.5rem;text-align:center;border-top:1px solid var(--sand);}
 .ftl img{height:36px;width:auto;display:block;margin:0 auto 1.3rem;opacity:0.5;}
@@ -300,6 +335,7 @@ footer p{font-size:0.68rem;letter-spacing:0.12em;color:var(--warm);margin-bottom
     <li><a href="#catalogue">Collection</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#stories">Customer Stories</a></li>
+    <li><a href="#sizeguide">Ring Size Guide</a></li>
   </ul>
   <a href="https://www.instagram.com/ellanoesluna/" target="_blank" rel="noopener" class="nav-insta">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/></svg>
@@ -319,6 +355,7 @@ footer p{font-size:0.68rem;letter-spacing:0.12em;color:var(--warm);margin-bottom
   </div>
   <a href="#about" onclick="closeMenu()">About</a>
   <a href="#stories" onclick="closeMenu()">Customer Stories</a>
+  <a href="#sizeguide" onclick="closeMenu()">Ring Size Guide</a>
   <a href="https://www.instagram.com/ellanoesluna/" target="_blank" onclick="closeMenu()">Instagram</a>
 </div>
 
@@ -884,6 +921,56 @@ footer p{font-size:0.68rem;letter-spacing:0.12em;color:var(--warm);margin-bottom
       </div>
     </article>
     </div>
+  </div>
+</section>
+
+<section class="sizeg" id="sizeguide">
+  <div class="sizeg-in">
+    <p class="stories-eye">Ring size guide</p>
+    <h2 class="stories-h">Find your <em>perfect fit</em></h2>
+    <p class="stories-intro">Not sure about your size? Measure a ring that fits you comfortably and compare it with the table below.</p>
+    <div class="sizeg-card">
+      <h3 class="sizeg-ct">How to measure your ring</h3>
+      <p class="sizeg-cp">Place a ring that fits you comfortably on a ruler, lining it up with the zero and centring it. Measure the <strong>inner diameter only</strong>, not the outer edge of the band, then find the closest value in the table. In the example below, 16.5 mm corresponds to a US 6.</p>
+      <div class="sizeg-fig">
+        <svg class="sizeg-inner" viewBox="0 0 130 130" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+          <path d="M62.3 15.5 C83.0 12.8 106.4 32.6 104.6 57.8 C102.8 83.0 84.8 97.4 61.4 96.5 C38.0 95.6 23.6 77.6 25.4 53.3 C27.2 31.7 45.2 16.4 62.3 15.5ZM38.5 56a26.5 26.5 0 1 0 53 0a26.5 26.5 0 1 0 -53 0Z" fill="#d9c2a8" fill-rule="evenodd"/>
+          <path d="M39 56H91M39 56l5-2.5M39 56l5 2.5M91 56l-5-2.5M91 56l-5 2.5" stroke-width="1"/>
+          <text x="65" y="118" text-anchor="middle" fill="currentColor" stroke="none" font-size="12">inner diameter</text>
+        </svg>
+        <svg class="sizeg-ruler" viewBox="0 0 380 150" fill="none" stroke="currentColor" stroke-width="1.2" role="img" aria-label="A ring resting on a ruler, its inner edge lined up with zero, measuring 16.5 mm across">
+          <path d="M24 74H372M24 74V138H372" stroke-width="1.5"/>
+          <path d="M24.0 74v15M28.0 74v6M32.0 74v6M36.0 74v6M40.0 74v6M44.0 74v10M48.0 74v6M52.0 74v6M56.0 74v6M60.0 74v6M64.0 74v15M68.0 74v6M72.0 74v6M76.0 74v6M80.0 74v6M84.0 74v10M88.0 74v6M92.0 74v6M96.0 74v6M100.0 74v6M104.0 74v15M108.0 74v6M112.0 74v6M116.0 74v6M120.0 74v6M124.0 74v10M128.0 74v6M132.0 74v6M136.0 74v6M140.0 74v6M144.0 74v15M148.0 74v6M152.0 74v6M156.0 74v6M160.0 74v6M164.0 74v10M168.0 74v6M172.0 74v6M176.0 74v6M180.0 74v6M184.0 74v15M188.0 74v6M192.0 74v6M196.0 74v6M200.0 74v6M204.0 74v10M208.0 74v6M212.0 74v6M216.0 74v6M220.0 74v6M224.0 74v15M228.0 74v6M232.0 74v6M236.0 74v6M240.0 74v6M244.0 74v10M248.0 74v6M252.0 74v6M256.0 74v6M260.0 74v6M264.0 74v15M268.0 74v6M272.0 74v6M276.0 74v6M280.0 74v6M284.0 74v10M288.0 74v6M292.0 74v6M296.0 74v6M300.0 74v6M304.0 74v15M308.0 74v6M312.0 74v6M316.0 74v6M320.0 74v6M324.0 74v10M328.0 74v6M332.0 74v6M336.0 74v6M340.0 74v6M344.0 74v15M348.0 74v6M352.0 74v6M356.0 74v6M360.0 74v6M364.0 74v10" stroke-width="0.6" opacity="0.75"/>
+          <path d="M54.0 29.0 C77.0 26.0 103.0 48.0 101.0 76.0 C99.0 104.0 79.0 120.0 53.0 119.0 C27.0 118.0 11.0 98.0 13.0 71.0 C15.0 47.0 35.0 30.0 54.0 29.0ZM24 74a33 33 0 1 0 66 0a33 33 0 1 0 -66 0Z" fill="#d9c2a8" fill-rule="evenodd" stroke-width="1.8"/>
+          <path d="M24 26v30M90.0 26v30" stroke-dasharray="2 3" stroke-width="0.8"/>
+          <path d="M25 32H89.0M25 32l5-2.5M25 32l5 2.5M89.0 32l-5-2.5M89.0 32l-5 2.5" stroke-width="1"/>
+          <g fill="currentColor" stroke="none" font-size="12"><text x="64.0" y="112" text-anchor="middle">1</text><text x="104.0" y="112" text-anchor="middle">2</text><text x="144.0" y="112" text-anchor="middle">3</text><text x="184.0" y="112" text-anchor="middle">4</text><text x="224.0" y="112" text-anchor="middle">5</text><text x="264.0" y="112" text-anchor="middle">6</text><text x="304.0" y="112" text-anchor="middle">7</text><text x="344.0" y="112" text-anchor="middle">8</text><text x="57.0" y="18" text-anchor="middle" font-size="13">16.5 mm</text></g>
+        </svg>
+      </div>
+    </div>
+    <div class="sizeg-tw">
+      <table class="sizeg-t">
+        <thead><tr class="sizeg-grp"><th scope="col" id="sg-mm">MM</th><th scope="colgroup" colspan="3" id="sg-sz">Sizes</th></tr><tr><th scope="col" headers="sg-mm">Inner diameter</th><th scope="col" headers="sg-sz">US</th><th scope="col" headers="sg-sz">EU (ES / IT)</th><th scope="col" headers="sg-sz">FR / DE</th></tr></thead>
+        <tbody>
+        <tr><td>13.4</td><td>2</td><td>2</td><td>42</td></tr>
+        <tr><td>13.7</td><td>2.5</td><td>3</td><td>43</td></tr>
+        <tr><td>14.0</td><td>3</td><td>4</td><td>44</td></tr>
+        <tr><td>14.4</td><td>3.5</td><td>5</td><td>46</td></tr>
+        <tr><td>14.8</td><td>4</td><td>6.5</td><td>47</td></tr>
+        <tr><td>15.3</td><td>4.5</td><td>8</td><td>48</td></tr>
+        <tr><td>15.7</td><td>5</td><td>9.5</td><td>49</td></tr>
+        <tr><td>16.1</td><td>5.5</td><td>10.5</td><td>51</td></tr>
+        <tr><td>16.5</td><td>6</td><td>12</td><td>52</td></tr>
+        <tr><td>16.9</td><td>6.5</td><td>13</td><td>53</td></tr>
+        <tr><td>17.3</td><td>7</td><td>14.5</td><td>54</td></tr>
+        <tr><td>17.7</td><td>7.5</td><td>15.5</td><td>56</td></tr>
+        <tr><td>18.2</td><td>8</td><td>17</td><td>57</td></tr>
+        <tr><td>18.6</td><td>8.5</td><td>18.5</td><td>58</td></tr>
+        <tr><td>18.9</td><td>9</td><td>19.5</td><td>60</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="sizeg-note">Sizes are approximate and may vary slightly between countries. Not sure? <a href="https://ig.me/m/ellanoesluna" target="_blank" rel="noopener">Send us a message</a> and we will help you choose.</p>
   </div>
 </section>
 
